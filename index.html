@@ -223,7 +223,7 @@
                                 <p class="contain"><img src="img/admin-3.jpg" class="img-responsive  center-block" alt=""></p>
                                 <span>Photo</span>
                             </div>
-                            <div class="col-xs-2 folders text-center" ondblclick="openvid()">
+                            <div class="col-xs-2 folders text-center" ondblclick="dommel1()">
                                 <p class="contain"><img src="img/myposter.PNG" class="img-responsive  center-block" alt=""></p>
                                 <span>Video</span>
                             </div>
@@ -371,6 +371,26 @@
             </div>
         </div>
 
+        <div class="video-overlay" id="dommel.01">
+            <div class="fluid-container">
+                <div class="first-row-vid">
+                    <span class="center-text head-over">My Video</span>
+                    <div class="right">
+                        <i class="fa fa-times" onclick="closevid()"></i>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="second-row-vid">
+                    <!--<video class="center-block" width="" height="" controls>
+                            <source src="img/myExplain_2.mp4" type="video/mp4">
+                            <source src="img/myExplain_2.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                    </video>-->
+                    <div style="position:relative;height:0;padding-bottom:56.25%;"><iframe src="https://www.youtube.com/embed/KXZakl9dRomW6TOF" style="position:absolute;width: 50%;height: 50vh;left: 25%;" width="640" height="360" frameborder="0" allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </div>
+	    
         <div class="video-overlay" id="video-overlay">
             <div class="fluid-container">
                 <div class="first-row-vid">
@@ -1078,6 +1098,12 @@
             videoOverlay.style.transform = "scale(1)";
             document.getElementById('a3').style.display = "block";
         }
+	var videoOverlay = document.getElementById('dommel.01');
+
+	function dommel1() {
+            videoOverlay.style.transform = "scale(1)";
+            document.getElementById('a3').style.display = "block";
+        } 
 
         function closevid() {
             videoOverlay.style.transform = "scale(0)";
